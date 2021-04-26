@@ -52,6 +52,7 @@ namespace RadarSim
             {
                 DrawCircle(centerPointF.X, centerPointF.Y, distanceStepSize*i);
             }
+            graphics.DrawLine(penGreen, centerPointF.X, centerPointF.Y + (distanceStepSize*(distanceStepsCount-1)), centerPointF.X, centerPointF.Y - (distanceStepSize * (distanceStepsCount-1)));
         }
     }
 }

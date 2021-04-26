@@ -41,7 +41,7 @@
             this.pictureBoxRadarSim.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxRadarSim.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxRadarSim.Name = "pictureBoxRadarSim";
-            this.pictureBoxRadarSim.Size = new System.Drawing.Size(880, 497);
+            this.pictureBoxRadarSim.Size = new System.Drawing.Size(624, 521);
             this.pictureBoxRadarSim.TabIndex = 0;
             this.pictureBoxRadarSim.TabStop = false;
             this.pictureBoxRadarSim.Paint += new System.Windows.Forms.PaintEventHandler(this.PictureBoxRadarSim_Paint);
@@ -61,7 +61,7 @@
             this.buttonAddTargets.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonAddTargets.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonAddTargets.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.buttonAddTargets.Location = new System.Drawing.Point(772, 12);
+            this.buttonAddTargets.Location = new System.Drawing.Point(516, 12);
             this.buttonAddTargets.Name = "buttonAddTargets";
             this.buttonAddTargets.Size = new System.Drawing.Size(96, 30);
             this.buttonAddTargets.TabIndex = 1;
@@ -73,13 +73,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 497);
+            this.ClientSize = new System.Drawing.Size(624, 521);
             this.Controls.Add(this.buttonAddTargets);
             this.Controls.Add(this.pictureBoxRadarSim);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(640, 560);
             this.Name = "FormRadar";
-            this.Text = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.Text = "Radar";
             this.Load += new System.EventHandler(this.FormRadar_Load);
+            this.Shown += new System.EventHandler(this.FormRadar_Shown);
             this.Resize += new System.EventHandler(this.FormRadar_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRadarSim)).EndInit();
             this.ResumeLayout(false);

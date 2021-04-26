@@ -12,7 +12,7 @@ namespace RadarSim
 {
     public partial class FormRadar : Form
     {
-        RadarGraph RadarGraph = new RadarGraph();
+        RadarGraph RADAR = new RadarGraph();
         
         public FormRadar()
         {
@@ -31,10 +31,10 @@ namespace RadarSim
 
         private void FormRadar_Resize(object sender, EventArgs e)
         {
-            RadarGraph.InitGraphics(pictureBoxRadarSim);
+            RADAR.InitGraphics(pictureBoxRadarSim);
             pictureBoxRadarSim.Refresh();
-            RadarGraph.GetGraphics(pictureBoxRadarSim);
-            RadarGraph.DrawRadarGrid(pictureBoxRadarSim);
+            RADAR.GetGraphics(pictureBoxRadarSim);
+            RADAR.DrawRadarGrid(pictureBoxRadarSim);
         }
 
         private void ButtonAddTargets_Click(object sender, EventArgs e)
@@ -50,6 +50,14 @@ namespace RadarSim
         private void FormRadar_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormRadar_Shown(object sender, EventArgs e)
+        {
+            RADAR.InitGraphics(pictureBoxRadarSim);
+            pictureBoxRadarSim.Refresh();
+            RADAR.GetGraphics(pictureBoxRadarSim);
+            RADAR.DrawRadarGrid(pictureBoxRadarSim);
         }
     }
 }
