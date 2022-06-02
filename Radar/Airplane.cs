@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace Radar
 {
-    static public  class Airplane
+	static public  class Airplane
     {
        static public int Namber;
        static public int Lenght;

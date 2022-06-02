@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Radar
 {
-    class PolarCoordinate
+	class PolarCoordinate
     {
         /// <summary>
         /// Функция возвращает Х У кординаты по азимуту и радиусу 

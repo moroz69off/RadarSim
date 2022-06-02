@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace Radar
 {
-    public class AllColor
+	public class AllColor
     {
         public Color[] colors = new Color[12];
         public int Bright = 30;
