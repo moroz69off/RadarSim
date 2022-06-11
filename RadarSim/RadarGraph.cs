@@ -5,13 +5,17 @@ namespace RadarSim
 {
 	class RadarGraph
     {
-        const int distanceStepsCount= 15;
+        const int distanceStepsCount = 15;
+
         public float distanceStepSize;
         public float radarRadius;
+
         Graphics graphics;
         Bitmap bitmap;
         Image image;
+
         public PointF centerPointF;
+
         public Pen penGreen = new Pen(Color.FromArgb(100, 0, 255, 0),0.25F);
         
         public void InitGraphics(PictureBox pictureBoxRadarSim)
@@ -24,7 +28,7 @@ namespace RadarSim
             pictureBoxRadarSim.Image = bitmap;
             graphics = Graphics.FromHwnd(pictureBoxRadarSim.Handle);
             graphics.Clear(Color.Black);
-            pictureBoxRadarSim.BackColor = Color.Black;
+            //pictureBoxRadarSim.BackColor = Color.Black;
         }
 
         internal void DrawCircle(float xCenter, float yCenter, float radius)
