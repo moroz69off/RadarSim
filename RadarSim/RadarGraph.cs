@@ -24,7 +24,7 @@ namespace RadarSim
             centerPointF.Y = pictureBoxRadarSim.Height / 2;
             distanceStepSize = (pictureBoxRadarSim.Height / 2) / 15;
             radarRadius = pictureBoxRadarSim.Height / 2;
-            bitmap = new Bitmap(pictureBoxRadarSim.Width, pictureBoxRadarSim.Height);
+			bitmap = new Bitmap(pictureBoxRadarSim.Width + 1, pictureBoxRadarSim.Height + 1);
             pictureBoxRadarSim.Image = bitmap;
             graphics = Graphics.FromHwnd(pictureBoxRadarSim.Handle);
             graphics.Clear(Color.Black);

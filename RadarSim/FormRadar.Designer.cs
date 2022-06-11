@@ -84,6 +84,7 @@
 			this.Text = "Radar";
 			this.Load += new System.EventHandler(this.FormRadar_Load);
 			this.Shown += new System.EventHandler(this.FormRadar_Shown);
+			this.VisibleChanged += new System.EventHandler(this.FormRadar_VisibleChanged);
 			this.Resize += new System.EventHandler(this.FormRadar_Resize);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxRadarSim)).EndInit();
 			this.ResumeLayout(false);
