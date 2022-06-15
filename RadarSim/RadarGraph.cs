@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace RadarSim
@@ -51,6 +52,10 @@ namespace RadarSim
 			graphics.DrawLine(penGreen, centerPointF.X, centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)), centerPointF.X, centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)));
 			// verticale
 			graphics.DrawLine(penGreen, centerPointF.X + (distanceStepSize * (distanceStepsCount - 1)), centerPointF.Y, centerPointF.X - (distanceStepSize * (distanceStepsCount - 1)), centerPointF.Y);
+			//
+			graphics.DrawLine(penGreen, (float)(centerPointF.X * Math.Sin(45 * Math.PI / 180)), (float)((centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1))) * Math.Sin(45 * Math.PI / 180)), centerPointF.X + (float)(centerPointF.X * Math.Sin(45 * Math.PI / 180)), centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)));
+			//
+			graphics.DrawLine(penGreen, centerPointF.X + (float)(centerPointF.X * Math.Sin(45 * Math.PI / 180)), centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)), centerPointF.X - (float)(centerPointF.X * Math.Cos(45 * Math.PI / 180)), centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)));
 		}
 	}
 }
