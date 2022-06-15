@@ -24,6 +24,11 @@ namespace RadarSim
 
 		private void FormRadar_Resize(object sender, EventArgs e)
 		{
+			ReDrawRadarGrid();
+		}
+
+		private void ReDrawRadarGrid()
+		{
 			RADAR.InitGraphics(pictureBoxRadarSim);
 			pictureBoxRadarSim.Refresh();
 			RADAR.GetGraphics(pictureBoxRadarSim);
@@ -47,18 +52,12 @@ namespace RadarSim
 
 		private void FormRadar_Shown(object sender, EventArgs e)
 		{
-			RADAR.InitGraphics(pictureBoxRadarSim);
-			pictureBoxRadarSim.Refresh();
-			RADAR.GetGraphics(pictureBoxRadarSim);
-			RADAR.DrawRadarGrid(pictureBoxRadarSim);
+			ReDrawRadarGrid();
 		}
 
 		private void FormRadar_VisibleChanged(object sender, EventArgs e)
 		{
-			RADAR.InitGraphics(pictureBoxRadarSim);
-			pictureBoxRadarSim.Refresh();
-			RADAR.GetGraphics(pictureBoxRadarSim);
-			RADAR.DrawRadarGrid(pictureBoxRadarSim);
+			ReDrawRadarGrid();
 		}
 	}
 }
