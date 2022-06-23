@@ -27,14 +27,6 @@ namespace RadarSim
 			ReDrawRadarGrid();
 		}
 
-		private void ReDrawRadarGrid()
-		{
-			RADAR.InitGraphics(pictureBoxRadarSim);
-			pictureBoxRadarSim.Refresh();
-			RADAR.GetGraphics(pictureBoxRadarSim);
-			RADAR.DrawRadarGrid(pictureBoxRadarSim);
-		}
-
 		private void ButtonAddTargets_Click(object sender, EventArgs e)
 		{
 
@@ -59,5 +51,14 @@ namespace RadarSim
 		{
 			ReDrawRadarGrid();
 		}
+
+		private void ReDrawRadarGrid()
+		{
+			RADAR.InitGraphics(pictureBoxRadarSim);
+			pictureBoxRadarSim.Refresh();
+			RADAR.GetGraphics(pictureBoxRadarSim);
+			RADAR.DrawRadarGrid(pictureBoxRadarSim);
+		}
+
 	}
 }

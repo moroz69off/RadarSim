@@ -31,11 +31,6 @@ namespace RadarSim
 			graphics.Clear(Color.Black);
 		}
 
-		private void CalculateRadarGridRadius(PictureBox pictureBox)
-		{
-			radarRadius = pictureBox.Height / 2;
-		}
-
 		internal void DrawCircle(float xCenter, float yCenter, float radius)
 		{
 			graphics.DrawEllipse(penGreen, xCenter - radius, yCenter - radius, 2 * radius, 2 * radius);
@@ -44,8 +39,17 @@ namespace RadarSim
 		internal void GetGraphics(PictureBox pictureBoxRadarSim)
 		{
 			CalculateRadarGridRadius(pictureBoxRadarSim);
-			image = pictureBoxRadarSim.Image;
+			//image = pictureBoxRadarSim.Image;
 		}
+
+		private void CalculateRadarGridRadius(PictureBox pictureBox)
+		{
+			if (pictureBox.Width >= pictureBox.Height)
+				radarRadius = pictureBox.Height / 2;
+			else
+				radarRadius = pictureBox.Width / 2;
+		}
+
 
 		internal void DrawRadarGrid(PictureBox pictureBoxRadarSim)
 		{
@@ -53,38 +57,38 @@ namespace RadarSim
 			{
 				DrawCircle(centerPointF.X, centerPointF.Y, distanceStepSize * i);
 			}
+
 			// horizontale
 			graphics.DrawLine(penGreen,
 				centerPointF.X,
 				centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)),
 				centerPointF.X,
-				centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)));
+				centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1))
+			);
+
 			// verticale
 			graphics.DrawLine(penGreen,
 				centerPointF.X + (distanceStepSize * (distanceStepsCount - 1)),
 				centerPointF.Y,
 				centerPointF.X - (distanceStepSize * (distanceStepsCount - 1)),
-				centerPointF.Y);
-			//
+				centerPointF.Y
+			);
+
+			// diagonale 1
 			graphics.DrawLine(penGreen,
-				//
-				centerPointF.X + (distanceStepSize * (distanceStepsCount - 1)),
-				//
-				centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)),
-				//
-				centerPointF.X - (distanceStepSize * (distanceStepsCount - 1)),
-				//
-				centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)));
-			//
+				(float)(centerPointF.X + (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
+				(float)(centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
+				(float)(centerPointF.X - (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
+				(float)(centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4))
+			);
+
+			// diagonale 2
 			graphics.DrawLine(penGreen,
-				//
-				centerPointF.X - (distanceStepSize * (distanceStepsCount - 1)),
-				//
-				centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)),
-				//
-				centerPointF.X + (distanceStepSize * (distanceStepsCount - 1)),
-				//
-				centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)));
+				(float)(centerPointF.X - (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
+				(float)(centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
+				(float)(centerPointF.X + (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
+				(float)(centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4))
+			);
 		}
 	}
 }
