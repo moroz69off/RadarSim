@@ -24,11 +24,16 @@ namespace RadarSim
 			centerPointF.X = pictureBox.Width / 2;
 			centerPointF.Y = pictureBox.Height / 2;
 			distanceStepSize = (pictureBox.Height / 2) / 15;
-			radarRadius = pictureBox.Height / 2;
+			CalculateRadarGridRadius(pictureBox);
 			bitmap = new Bitmap(pictureBox.Width + 1, pictureBox.Height + 1);
 			pictureBox.Image = bitmap;
 			graphics = Graphics.FromHwnd(pictureBox.Handle);
 			graphics.Clear(Color.Black);
+		}
+
+		private void CalculateRadarGridRadius(PictureBox pictureBox)
+		{
+			radarRadius = pictureBox.Height / 2;
 		}
 
 		internal void DrawCircle(float xCenter, float yCenter, float radius)
@@ -38,7 +43,7 @@ namespace RadarSim
 
 		internal void GetGraphics(PictureBox pictureBoxRadarSim)
 		{
-			radarRadius = pictureBoxRadarSim.Height / 2;
+			CalculateRadarGridRadius(pictureBoxRadarSim);
 			image = pictureBoxRadarSim.Image;
 		}
 
