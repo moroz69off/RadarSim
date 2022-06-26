@@ -19,7 +19,9 @@ namespace RadarSim
 
 		private void Timer_Tick(object sender, EventArgs e)
 		{
-
+			Console.WriteLine(sender);
+			Console.WriteLine(e);
+			RADAR.ReDrawRaySimulator();
 		}
 
 		private void FormRadar_Resize(object sender, EventArgs e)

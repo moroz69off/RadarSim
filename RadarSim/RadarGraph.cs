@@ -9,11 +9,11 @@ namespace RadarSim
 		const int distanceStepsCount = 15;
 
 		public float distanceStepSize;
-		 public float radarRadius;
+		public float radarRadius;
 
 		Graphics graphics;
 		Bitmap bitmap;
-		Image image;
+		//Image image;
 
 		public PointF centerPointF;
 
@@ -29,6 +29,11 @@ namespace RadarSim
 			pictureBox.Image = bitmap;
 			graphics = Graphics.FromHwnd(pictureBox.Handle);
 			graphics.Clear(Color.Black);
+		}
+
+		internal void ReDrawRaySimulator()
+		{
+
 		}
 
 		internal void DrawCircle(float xCenter, float yCenter, float radius)
