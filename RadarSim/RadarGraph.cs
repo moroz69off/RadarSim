@@ -52,16 +52,9 @@ namespace RadarSim
 
 		private float CalculateDistanceStepSize(PictureBox pb)
 		{
-			float stepSize = 0;
-			if (pb.Width > pb.Height)
-			{
-				stepSize = (pb.Height / 2) / 15;
-			}
-			else
-			{
-				stepSize = (pb.Width / 2) / 15;
-			}
-			return stepSize;
+			if (pb.Width > pb.Height) distanceStepSize = (pb.Height / 2) / 15;
+			else distanceStepSize = (pb.Width / 2) / 15;
+			return distanceStepSize;
 		}
 
 		internal void DrawRadarGrid(PictureBox pictureBoxRadarSim)
@@ -71,7 +64,6 @@ namespace RadarSim
 				DrawCircle(centerPointF.X, centerPointF.Y, distanceStepSize * i);
 			}
 
-			// horizontale
 			graphics.DrawLine(penGreen,
 				centerPointF.X,
 				centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)),
@@ -79,7 +71,6 @@ namespace RadarSim
 				centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1))
 			);
 
-			// verticale
 			graphics.DrawLine(penGreen,
 				centerPointF.X + (distanceStepSize * (distanceStepsCount - 1)),
 				centerPointF.Y,
@@ -87,7 +78,6 @@ namespace RadarSim
 				centerPointF.Y
 			);
 
-			// diagonale 1
 			graphics.DrawLine(penGreen,
 				(float)(centerPointF.X + (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
 				(float)(centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
@@ -95,7 +85,6 @@ namespace RadarSim
 				(float)(centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4))
 			);
 
-			// diagonale 2
 			graphics.DrawLine(penGreen,
 				(float)(centerPointF.X - (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
 				(float)(centerPointF.Y - (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
