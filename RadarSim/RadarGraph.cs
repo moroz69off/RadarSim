@@ -23,7 +23,7 @@ namespace RadarSim
 		{
 			centerPointF.X = pictureBox.Width / 2;
 			centerPointF.Y = pictureBox.Height / 2;
-			distanceStepSize = (pictureBox.Height / 2) / 15;
+			distanceStepSize = CalculateDistanceStepSize(pictureBox);
 			CalculateRadarGridRadius(pictureBox);
 			bitmap = new Bitmap(pictureBox.Width + 1, pictureBox.Height + 1);
 			pictureBox.Image = bitmap;
@@ -36,11 +36,11 @@ namespace RadarSim
 			graphics.DrawEllipse(penGreen, xCenter - radius, yCenter - radius, 2 * radius, 2 * radius);
 		}
 
-		internal void GetGraphics(PictureBox pictureBoxRadarSim)
-		{
-			CalculateRadarGridRadius(pictureBoxRadarSim);
-			//image = pictureBoxRadarSim.Image;
-		}
+		//internal void GetGraphics(PictureBox pictureBoxRadarSim)
+		//{
+		//	CalculateRadarGridRadius(pictureBoxRadarSim);
+		//	image = pictureBoxRadarSim.Image;
+		//}
 
 		private void CalculateRadarGridRadius(PictureBox pictureBox)
 		{
@@ -50,6 +50,19 @@ namespace RadarSim
 				radarRadius = pictureBox.Width / 2;
 		}
 
+		private float CalculateDistanceStepSize(PictureBox pb)
+		{
+			float stepSize = 0;
+			if (pb.Width > pb.Height)
+			{
+				stepSize = (pb.Height / 2) / 15;
+			}
+			else
+			{
+				stepSize = (pb.Width / 2) / 15;
+			}
+			return stepSize;
+		}
 
 		internal void DrawRadarGrid(PictureBox pictureBoxRadarSim)
 		{

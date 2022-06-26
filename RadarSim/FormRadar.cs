@@ -56,7 +56,7 @@ namespace RadarSim
 		{
 			RADAR.InitGraphics(pictureBoxRadarSim);
 			pictureBoxRadarSim.Refresh();
-			RADAR.GetGraphics(pictureBoxRadarSim);
+			//RADAR.GetGraphics(pictureBoxRadarSim);
 			RADAR.DrawRadarGrid(pictureBoxRadarSim);
 		}
 
