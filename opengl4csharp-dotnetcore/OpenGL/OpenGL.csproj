@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Giawa.OpenGL</PackageId>
+    <PackageVersion>0.2.1</PackageVersion>
+    <Authors>Giawa</Authors>
+    <Description>.NET Standard Bindings to OpenGL 4.5</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <Copyright>Copyright 2021 (c) Giawa. All rights reserved.</Copyright>
+    <PackageTags>opengl</PackageTags>
+    <PackageLicenseUrl>https://github.com/giawa/opengl4csharp/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://www.github.com/giawa/opengl4csharp</PackageProjectUrl>
+    <LangVersion>7.3</LangVersion>
+    <Version>0.2.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="OpenGL.dll.config"></Content>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0"></PackageReference>
+    <PackageReference Include="System.Memory" Version="4.5.4"></PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD1_4</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.4\OpenGL.xml</DocumentationFile>
+    <DefineConstants>RELEASE;USE_NUMERICS</DefineConstants>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+
+</Project>
