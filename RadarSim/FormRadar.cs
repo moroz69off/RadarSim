@@ -6,6 +6,7 @@ namespace RadarSim
 	public partial class FormRadar : Form
 	{
 		RadarGraph RADAR = new RadarGraph();
+		RadarRay RAY = new RadarRay();
 
 		public FormRadar()
 		{
@@ -19,8 +20,6 @@ namespace RadarSim
 
 		private void Timer_Tick(object sender, EventArgs e)
 		{
-			Console.WriteLine(sender);
-			Console.WriteLine(e);
 			RADAR.ReDrawRaySimulator();
 		}
 
