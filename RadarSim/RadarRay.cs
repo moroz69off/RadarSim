@@ -5,8 +5,8 @@ namespace RadarSim
 {
 	internal class RadarRay
 	{
-		public PointF RayCenter { get; } = new PointF();
-		public PointF RayRadius { get; } = new PointF();
+		public PointF RayCenter { get; }
+		public PointF RayRadius { get; set; }
 
 		public RadarRay()
 		{
