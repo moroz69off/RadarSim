@@ -47,11 +47,6 @@ namespace RadarSim
 			graphics.DrawEllipse(penGreen, xCenter - radius, yCenter - radius, 2 * radius, 2 * radius);
 		}
 
-		//internal void GetGraphics(PictureBox pictureBoxRadarSim)
-		//{
-		//	CalculateRadarGridRadius(pictureBoxRadarSim);
-		//	image = pictureBoxRadarSim.Image;
-		//}
 
 		private void CalculateRadarGridRadius(PictureBox pictureBox)
 		{
