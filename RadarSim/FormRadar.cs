@@ -6,7 +6,6 @@ namespace RadarSim
 	public partial class FormRadar : Form
 	{
 		RadarGraph RADAR = new RadarGraph();
-		RadarRay RAY = new RadarRay(new System.Drawing.PointF());
 
 		public FormRadar()
 		{

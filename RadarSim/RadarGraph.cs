@@ -16,11 +16,10 @@ namespace RadarSim
 		Image image;
 
 		static PointF centerPointF;
-		RadarRay RAY;
-
 
 		public Pen penGreen = new Pen(Color.FromArgb(100, 0, 255, 0), 0.25F);
 		private float deg;
+
 
 		public void InitGraphics(PictureBox pictureBox)
 		{
@@ -28,7 +27,6 @@ namespace RadarSim
 			centerPointF.Y = pictureBox.Height / 2;
 			distanceStepSize = CalculateDistanceStepSize(pictureBox);
 			CalculateRadarGridRadius(pictureBox);
-			RAY = new RadarRay(centerPointF);
 			bitmap = new Bitmap(pictureBox.Width + 1, pictureBox.Height + 1);
 			pictureBox.Image = bitmap;
 			graphics = Graphics.FromHwnd(pictureBox.Handle);
@@ -38,9 +36,8 @@ namespace RadarSim
 		internal void ReDrawRaySimulator()
 		{
 			if (deg > 360) deg = 0;
-
 			deg += 10;
-			RAY.Rotate(deg);
+			Console.WriteLine(deg);
 		}
 
 		internal void DrawCircle(float xCenter, float yCenter, float radius)
