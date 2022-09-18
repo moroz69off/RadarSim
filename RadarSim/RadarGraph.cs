@@ -11,13 +11,13 @@ namespace RadarSim
 		public float distanceStepSize;
 		public float radarRadius;
 
-		RadarRay RAY = new RadarRay();
-
-		Graphics graphics;
+		public Graphics graphics;
 		Bitmap bitmap;
-		//Image image;
+		Image image;
 
-		public PointF centerPointF;
+		static PointF centerPointF;
+		RadarRay RAY;
+
 
 		public Pen penGreen = new Pen(Color.FromArgb(100, 0, 255, 0), 0.25F);
 		private float deg;
@@ -28,6 +28,7 @@ namespace RadarSim
 			centerPointF.Y = pictureBox.Height / 2;
 			distanceStepSize = CalculateDistanceStepSize(pictureBox);
 			CalculateRadarGridRadius(pictureBox);
+			RAY = new RadarRay(centerPointF);
 			bitmap = new Bitmap(pictureBox.Width + 1, pictureBox.Height + 1);
 			pictureBox.Image = bitmap;
 			graphics = Graphics.FromHwnd(pictureBox.Handle);
@@ -97,6 +98,11 @@ namespace RadarSim
 				(float)(centerPointF.X + (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4)),
 				(float)(centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4))
 			);
+		}
+
+		internal void GetGraphics(PictureBox pictureBoxRadarSim)
+		{
+
 		}
 	}
 }
