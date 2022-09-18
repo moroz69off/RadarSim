@@ -33,9 +33,9 @@ namespace RadarSim
 			graphics.Clear(Color.Black);
 		}
 
-		internal void ReDrawRaySimulator()
+		internal void DrawRay()
 		{
-			if (deg > 360) deg = 0;
+			if (deg >= 360) deg = 0;
 			deg += 10;
 			Console.WriteLine(deg);
 		}

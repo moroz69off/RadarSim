@@ -45,13 +45,14 @@
 			this.pictureBoxRadarSim.Size = new System.Drawing.Size(624, 521);
 			this.pictureBoxRadarSim.TabIndex = 0;
 			this.pictureBoxRadarSim.TabStop = false;
+			this.pictureBoxRadarSim.Tag = "singlePictureBox";
 			this.pictureBoxRadarSim.Paint += new System.Windows.Forms.PaintEventHandler(this.PictureBoxRadarSim_Paint);
 			this.pictureBoxRadarSim.Layout += new System.Windows.Forms.LayoutEventHandler(this.pictureBoxRadarSim_Layout);
 			// 
 			// timer
 			// 
 			this.timer.Enabled = true;
-			this.timer.Interval = 60;
+			this.timer.Interval = 600;
 			this.timer.Tick += new System.EventHandler(this.Timer_Tick);
 			// 
 			// buttonAddTargets
