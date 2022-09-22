@@ -5,16 +5,11 @@ namespace RadarSim
 {
 	public partial class FormRadar : Form
 	{
-		RadarGraph RADAR = new RadarGraph();
+		readonly RadarGraph RADAR = new RadarGraph();
 
 		public FormRadar()
 		{
 			InitializeComponent();
-		}
-
-		private void PictureBoxRadarSim_Paint(object sender, PaintEventArgs e)
-		{
-
 		}
 
 		private void Timer_Tick(object sender, EventArgs e)
@@ -22,17 +17,7 @@ namespace RadarSim
 			RADAR.DrawRay();
 		}
 
-		private void FormRadar_Resize(object sender, EventArgs e)
-		{
-			ReDrawRadarGrid();
-		}
-
 		private void ButtonAddTargets_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void pictureBoxRadarSim_Layout(object sender, LayoutEventArgs e)
 		{
 
 		}
@@ -44,19 +29,24 @@ namespace RadarSim
 
 		private void FormRadar_Shown(object sender, EventArgs e)
 		{
-			ReDrawRadarGrid();
+			DrawRadarGrid();
 		}
 
 		private void FormRadar_VisibleChanged(object sender, EventArgs e)
 		{
-			ReDrawRadarGrid();
+			DrawRadarGrid();
 		}
 
-		private void ReDrawRadarGrid()
+		private void FormRadar_Resize(object sender, EventArgs e)
+		{
+			DrawRadarGrid();
+		}
+
+		private void DrawRadarGrid()
 		{
 			RADAR.InitGraphics(pictureBoxRadarSim);
 			pictureBoxRadarSim.Refresh();
-			RADAR.GetGraphics(pictureBoxRadarSim);
+			//RADAR.GetGraphics(pictureBoxRadarSim);
 			RADAR.DrawRadarGrid(pictureBoxRadarSim);
 		}
 

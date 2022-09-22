@@ -47,7 +47,6 @@
 			this.pictureBoxRadarSim.TabStop = false;
 			this.pictureBoxRadarSim.Tag = "singlePictureBox";
 			this.pictureBoxRadarSim.Paint += new System.Windows.Forms.PaintEventHandler(this.PictureBoxRadarSim_Paint);
-			this.pictureBoxRadarSim.Layout += new System.Windows.Forms.LayoutEventHandler(this.pictureBoxRadarSim_Layout);
 			// 
 			// timer
 			// 

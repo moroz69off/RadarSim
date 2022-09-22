@@ -38,6 +38,13 @@ namespace RadarSim
 			if (deg >= 360) deg = 0;
 			deg += 10;
 			Console.WriteLine(deg);
+
+			graphics.DrawLine(penGreen,
+				(float)(centerPointF.X),
+				(float)(centerPointF.Y),
+				(float)(centerPointF.X - (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(deg)),
+				(float)(centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)) * Math.Cos(deg))
+			);
 		}
 
 		internal void DrawCircle(float xCenter, float yCenter, float radius)
@@ -97,9 +104,9 @@ namespace RadarSim
 			);
 		}
 
-		internal void GetGraphics(PictureBox pictureBoxRadarSim)
-		{
+		//internal void GetGraphics(PictureBox pictureBoxRadarSim)
+		//{
 
-		}
+		//}
 	}
 }
