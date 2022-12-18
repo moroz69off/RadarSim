@@ -40,10 +40,10 @@ namespace RadarSim
 			Console.WriteLine(deg);
 
 			graphics.DrawLine(penGreen,
-				(float)(centerPointF.X),
-				(float)(centerPointF.Y),
-				(float)(centerPointF.X - (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(deg)),
-				(float)(centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)) * Math.Cos(deg))
+				(float)centerPointF.X,
+				(float)centerPointF.Y,
+				(float)(centerPointF.X - distanceStepSize * (distanceStepsCount - 1) * Math.Sin(deg)),
+				(float)(centerPointF.Y + distanceStepSize * (distanceStepsCount - 1) * Math.Cos(deg))
 			);
 		}
 
