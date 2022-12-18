@@ -35,8 +35,8 @@ namespace RadarSim
 
 		internal void DrawRay()
 		{
-			if (deg >= 360) deg = 0;
-			deg += 10;
+			if (deg >= (Math.PI*2)) deg = 0;
+			deg += (float)(Math.PI * 2)/120;
 			Console.WriteLine(deg);
 
 			graphics.DrawLine(penGreen,
@@ -103,10 +103,5 @@ namespace RadarSim
 				(float)(centerPointF.Y + (distanceStepSize * (distanceStepsCount - 1)) * Math.Sin(Math.PI / 4))
 			);
 		}
-
-		//internal void GetGraphics(PictureBox pictureBoxRadarSim)
-		//{
-
-		//}
 	}
 }

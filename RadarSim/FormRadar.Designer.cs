@@ -46,12 +46,11 @@
 			this.pictureBoxRadarSim.TabIndex = 0;
 			this.pictureBoxRadarSim.TabStop = false;
 			this.pictureBoxRadarSim.Tag = "singlePictureBox";
-
 			// 
 			// timer
 			// 
 			this.timer.Enabled = true;
-			this.timer.Interval = 600;
+			this.timer.Interval = 50;
 			this.timer.Tick += new System.EventHandler(this.Timer_Tick);
 			// 
 			// buttonAddTargets
