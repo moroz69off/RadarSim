@@ -46,7 +46,7 @@
 			this.pictureBoxRadarSim.TabIndex = 0;
 			this.pictureBoxRadarSim.TabStop = false;
 			this.pictureBoxRadarSim.Tag = "singlePictureBox";
-			this.pictureBoxRadarSim.Paint += new System.Windows.Forms.PaintEventHandler(this.PictureBoxRadarSim_Paint);
+
 			// 
 			// timer
 			// 
@@ -84,7 +84,6 @@
 			this.Name = "FormRadar";
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
 			this.Text = "Radar";
-			this.Load += new System.EventHandler(this.FormRadar_Load);
 			this.Shown += new System.EventHandler(this.FormRadar_Shown);
 			this.VisibleChanged += new System.EventHandler(this.FormRadar_VisibleChanged);
 			this.Resize += new System.EventHandler(this.FormRadar_Resize);
