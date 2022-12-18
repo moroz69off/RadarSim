@@ -36,7 +36,7 @@ namespace RadarSim
 		internal void DrawRay()
 		{
 			if (deg >= (Math.PI*2)) deg = 0;
-			deg += (float)(Math.PI * 2)/120;
+			deg += (float)(Math.PI * 2)/180;
 			Console.WriteLine(deg);
 
 			graphics.DrawLine(penGreen,
