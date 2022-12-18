@@ -22,11 +22,6 @@ namespace RadarSim
 
 		}
 
-		private void FormRadar_Load(object sender, EventArgs e)
-		{
-
-		}
-
 		private void FormRadar_Shown(object sender, EventArgs e)
 		{
 			DrawRadarGrid();
