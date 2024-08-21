@@ -94,7 +94,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBoxRadarSim;
+        public System.Windows.Forms.PictureBox pictureBoxRadarSim;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Button buttonAddTargets;
     }

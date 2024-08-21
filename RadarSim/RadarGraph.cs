@@ -38,7 +38,7 @@ namespace RadarSim
 			if (deg >= (Math.PI*2)) deg = 0;
 			deg += (float)(Math.PI * 2)/180;
 			Console.WriteLine(deg);
-
+			//graphics.Clear(Color.Black);
 			graphics.DrawLine(penGreen,
 				(float)centerPointF.X,
 				(float)centerPointF.Y,
