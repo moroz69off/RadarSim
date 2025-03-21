@@ -19,6 +19,7 @@ namespace RadarSim
 
 		public Pen penGreen = new Pen(Color.FromArgb(100, 0, 255, 0), 0.25F);
 		private float deg;
+		public Color black = Color.Black;
 
 
 		public void InitGraphics(PictureBox pictureBox)
@@ -37,15 +38,15 @@ namespace RadarSim
 		{
 			if (deg >= (Math.PI*2)) deg = 0;
 			deg += (float)(Math.PI * 2)/180;
-			Console.WriteLine(deg);
-			//graphics.Clear(Color.Black);
+			graphics.Clear(Color.Black);
 			graphics.DrawLine(penGreen,
 				(float)centerPointF.X,
 				(float)centerPointF.Y,
 				(float)(centerPointF.X - distanceStepSize * (distanceStepsCount - 1) * Math.Sin(deg)),
 				(float)(centerPointF.Y + distanceStepSize * (distanceStepsCount - 1) * Math.Cos(deg))
 			);
-		}
+			//DrawRadarGrid();
+        }
 
 		internal void DrawCircle(float xCenter, float yCenter, float radius)
 		{

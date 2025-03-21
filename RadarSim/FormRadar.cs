@@ -14,10 +14,13 @@ namespace RadarSim
 
 		private void Timer_Tick(object sender, EventArgs e)
 		{
-			RADAR.DrawRay();
-		}
+			RADAR.graphics.Clear(RADAR.black);
+            RADAR.DrawRay();
+            RADAR.DrawCircle(pictureBoxRadarSim.Width / 2, pictureBoxRadarSim.Height / 2, RADAR.radarRadius);
 
-		private void ButtonAddTargets_Click(object sender, EventArgs e)
+        }
+
+        private void ButtonAddTargets_Click(object sender, EventArgs e)
 		{
 
 		}
