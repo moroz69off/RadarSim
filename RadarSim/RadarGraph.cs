@@ -6,7 +6,7 @@ namespace RadarSim
 {
 	class RadarGraph
 	{
-		const int distanceStepsCount = 15;
+		const int distanceStepsCount = 12;
 
 		public float distanceStepSize;
 		public float radarRadius;
