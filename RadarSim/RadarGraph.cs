@@ -44,8 +44,7 @@ namespace RadarSim
 				(float)centerPointF.Y,
 				(float)(centerPointF.X - distanceStepSize * (distanceStepsCount - 1) * Math.Sin(deg)),
 				(float)(centerPointF.Y + distanceStepSize * (distanceStepsCount - 1) * Math.Cos(deg))
-			);
-			//DrawRadarGrid();
+            );
         }
 
 		internal void DrawCircle(float xCenter, float yCenter, float radius)
