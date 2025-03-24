@@ -31,7 +31,7 @@ namespace Radar
         double[] percent;
         double[] min;
         double[] max;
-        int a1 = 0,a2 = 0,a3 = 0,a4=0; Bitmap memoryImage;
+        int a1 = 0, a2 = 0, a3 = 0, a4 = 0; Bitmap memoryImage;
         private void PictureBox1_Paint(object sender, PaintEventArgs e)
         {
             DoubleBuffered = true;
