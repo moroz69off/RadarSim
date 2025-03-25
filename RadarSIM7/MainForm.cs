@@ -45,7 +45,7 @@ namespace RadarSIM7
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-
+            CalculateRadarSize(100, 100);
         }
     }
 }
