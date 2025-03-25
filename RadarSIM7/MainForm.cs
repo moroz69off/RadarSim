@@ -12,7 +12,9 @@ namespace RadarSIM7
 {
     public partial class MainForm : Form
     {
-        float radarRadius = 0;
+        private int radarRadius = 0;
+        private int width = 0;
+        private int height = 0;
 
         public MainForm()
         {
@@ -45,7 +47,9 @@ namespace RadarSIM7
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            CalculateRadarSize(100, 100);
+            width = MainForm.ActiveForm.Width;
+            height = MainForm.ActiveForm.Height;
+            CalculateRadarSize(width, height);
         }
     }
 }
