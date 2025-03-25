@@ -16,6 +16,8 @@ namespace RadarSIM7
         private int width = 0;
         private int height = 0;
 
+        RadarGraph RGr = new RadarGraph();
+
         public MainForm()
         {
             InitializeComponent();
@@ -50,6 +52,7 @@ namespace RadarSIM7
             width = MainForm.ActiveForm.Width;
             height = MainForm.ActiveForm.Height;
             CalculateRadarSize(width, height);
+            RGr.DrawGrid(radarRadius);
         }
     }
 }

@@ -13,5 +13,11 @@ namespace RadarSIM7
         public Graphics RadarGraphics;
         Bitmap bitmap;
         Image image;
-    }
+    
+
+    public void DrawGrid(int radius)
+        {
+
+        }
+    } 
 }
