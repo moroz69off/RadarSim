@@ -15,7 +15,7 @@ namespace RadarSIM7
         Image image;
     
 
-    public void DrawGrid(int radius)
+    public void DrawGrid(float radius)
         {
 
         }
