@@ -76,8 +76,8 @@ namespace Radar
 
             for (int r = 0;r<10000;r++)
             {
-                bool bx = false;//если тру то ++ если фолс то --
-                bool by = false;//если тру то ++ если фолс то --
+                bool bx = false;//если true то ++ если false то --
+                bool by = false;//если true то ++ если false то --
                 bool okx = false;
                 bool oky = false;
                 float km = (((float)height) / (scale * 10)) / 2;
