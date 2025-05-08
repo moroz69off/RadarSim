@@ -13,8 +13,8 @@ namespace RadarSIM7
     public partial class MainForm : Form
     {
         private float radarRadius = 0;
-        private int width = 0;
-        private int height = 0;
+        private int widthRadar = 0;
+        private int heightRadar = 0;
 
         RadarGraph RGr = new RadarGraph();
 
@@ -50,9 +50,9 @@ namespace RadarSIM7
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            width = MainForm.ActiveForm.Width;
-            height = MainForm.ActiveForm.Height;
-            radarRadius = CalculateRadarSize(width, height);
+            widthRadar = MainForm.ActiveForm.Width;
+            heightRadar = MainForm.ActiveForm.Height;
+            radarRadius = CalculateRadarSize(widthRadar, heightRadar);
             RGr.DrawGrid(radarRadius);
         }
     }
