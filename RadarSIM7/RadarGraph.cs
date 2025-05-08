@@ -10,11 +10,9 @@ namespace RadarSIM7
 {
     internal class RadarGraph
     {
-        RadarColorsClass RadarColors = new RadarColorsClass();
         public Graphics RadarGraphics;
         Bitmap bitmap;
-        Image image;
-    
+        Image image;    
 
     public void DrawGrid(float radius)
         {
