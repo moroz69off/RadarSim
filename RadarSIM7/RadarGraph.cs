@@ -16,7 +16,9 @@ namespace RadarSIM7
 
     public void DrawGrid(float radius)
         {
-            
+            // Здесь нужно нарисовать сетку радиальных координат
+            // ...
+
         }
     } 
 }
