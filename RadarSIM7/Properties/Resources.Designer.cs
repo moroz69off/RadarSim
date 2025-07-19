@@ -59,15 +59,5 @@ namespace RadarSIM7.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap textur_gas_kvas_com_32ex_p_teksturi_neba_s_oblakami_1 {
-            get {
-                object obj = ResourceManager.GetObject("textur-gas-kvas-com-32ex-p-teksturi-neba-s-oblakami-1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

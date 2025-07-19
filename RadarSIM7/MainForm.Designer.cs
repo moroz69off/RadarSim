@@ -44,7 +44,7 @@
             // 
             this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox.ErrorImage = global::RadarSIM7.Properties.Resources.textur_gas_kvas_com_32ex_p_teksturi_neba_s_oblakami_1;
+            //this.pictureBox.ErrorImage=global::RadarSIM7.Properties.Resources.textur_gas_kvas_com_32ex_p_teksturi_neba_s_oblakami_1;
             this.pictureBox.Location = new System.Drawing.Point(0, 0);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(622, 593);
